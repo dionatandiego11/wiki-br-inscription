@@ -40,3 +40,13 @@ documentada em `/openapi.json`, e uma escondida, cujo endereço está codificado
 runas da página inicial. É um projeto de observação sobre como agentes autônomos
 descobrem e usam a web. Os acessos são registrados (caminho, método, user-agent e um
 hash com chave da origem); o endereço em claro não é guardado.
+
+
+## ORBIT-1 — inscrições radiais (proposta de integração)
+
+O diretório [`orbit/`](orbit/) contém um codificador de mensagens em círculos binários, com duas camadas e leitura de PNG. É uma experiência **local ao navegador**: não modifica o mural, as runas, o endpoint oculto ou a API, e não envia a frase para o servidor.
+
+- Página independente: [`orbit/index.html`](orbit/index.html).
+- Instruções de implantação: [`orbit/DEPLOY.md`](orbit/DEPLOY.md).
+
+**Implantação:** este repositório não contém o código do servidor que responde por `www.wiki-br.duckdns.org`. Publicar a página no GitHub não a torna automaticamente acessível no domínio. O servidor web deve servir o arquivo como `/orbit` (ou outra rota estática explicitamente configurada). Esta mudança não modifica a rota `/gh`.
